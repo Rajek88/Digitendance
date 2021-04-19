@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#fff">
+
+    <ImageView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:src="@drawable/title"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/title"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/empinfo"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:layout_marginTop="5dp"
+            app:cardBackgroundColor="#fff"
+            >
+              <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="#fff"
+                        android:orientation="horizontal"
+                        >
+
+                  <androidx.cardview.widget.CardView
+                      android:layout_width="112dp"
+                      android:layout_height="match_parent"
+                      android:id="@+id/empimg"
+                      android:layout_marginStart="20dp"
+                      app:cardCornerRadius="56dp"
+                      android:layout_centerHorizontal="true">
+                      <ImageView
+                          android:layout_height="match_parent"
+                          android:layout_width="match_parent"
+                          android:id="@+id/imageView1"
+                          android:src="@drawable/newimg"
+                          android:background="#fff"
+                          android:scaleType="centerCrop"/>
+                  </androidx.cardview.widget.CardView>
+                  <LinearLayout
+                      android:layout_width="fill_parent"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical"
+                      android:layout_marginStart="10dp">
+
+                      <TextView
+                          android:id="@+id/name"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginLeft="2dp"
+                          android:layout_marginTop="20dp"
+                          android:layout_marginRight="10dp"
+                          android:layout_marginBottom="10dp"
+                          android:fontFamily="@font/amaranth_bold"
+                          android:text="Ishan Agrawal"
+                          android:textColor="#515253"
+                          android:textSize="20sp"
+                          ></TextView>
+
+                      <TextView
+                          android:id="@+id/rollno"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginLeft="2dp"
+                          android:layout_marginTop="3dp"
+                          android:layout_marginRight="10dp"
+                          android:layout_marginBottom="10dp"
+                          android:fontFamily="@font/amaranth"
+                          android:text="Managing Director\nTexure Technologies"
+                          android:textColor="#4C93AF"
+                          android:textSize="16sp"
+                          android:textStyle="bold"></TextView>
+                  </LinearLayout>
+                  <LinearLayout
+                      android:layout_width="fill_parent"
+                      android:layout_height="match_parent"
+                      android:layout_marginRight="10dp"
+                      android:orientation="vertical">
+                      <Button
+                          android:id="@+id/inLogger"
+                          android:layout_width="52dp"
+                          android:layout_height="52dp"
+                          android:layout_marginTop="3dp"
+                          android:layout_marginBottom="3dp"
+                          android:textAlignment="center"
+                          android:background="@drawable/roundbutton"
+                          android:text="In"/>
+                      <Button
+                          android:id="@+id/outLogger"
+                          android:layout_width="52dp"
+                          android:layout_height="52dp"
+                          android:layout_marginTop="3dp"
+                          android:layout_marginBottom="3dp"
+                          android:textAlignment="center"
+                          android:background="@drawable/roundbutton"
+                          android:text="Out"/>
+                  </LinearLayout>
+
+              </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="132dp"
+            android:id="@+id/emptools"
+            android:layout_below="@+id/empinfo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            >
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="132dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_height="match_parent"
+                            android:layout_width="130dp"
+                            android:background="#fff"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                >
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:id="@+id/gps"
+                                    android:src="@drawable/gps"
+                                    android:layout_centerInParent="true"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="My Location"
+                                    android:textSize="16sp"
+                                    android:textColor="#000000"
+                                    android:layout_below="@+id/gps"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    />
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/getLocation"
+                                    android:background="@android:color/transparent"
+                                    >
+
+                                </Button>
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_height="match_parent"
+                            android:layout_width="130dp"
+                            android:background="#fff"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            >
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                >
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:id="@+id/report"
+                                    android:src="@drawable/report"
+                                    android:layout_centerInParent="true"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="My Report"
+                                    android:textSize="16sp"
+                                    android:textColor="#000000"
+                                    android:layout_below="@+id/report"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    />
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/btnReport"
+                                    android:background="@android:color/transparent"
+                                    >
+                                </Button>
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_height="match_parent"
+                            android:layout_width="130dp"
+                            android:background="#fff"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginBottom="1dp"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            >
+                            <RelativeLayout
+                                android:id="@+id/leaveBtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                >
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:id="@+id/applyleave"
+                                    android:src="@drawable/leave"
+                                    android:layout_centerInParent="true"
+                                    />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Apply Leave"
+                                    android:textSize="16sp"
+                                    android:textColor="#000000"
+                                    android:layout_below="@+id/applyleave"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    />
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/btnLeave"
+                                    android:background="@android:color/transparent"
+                                    >
+
+                                </Button>
+
+
+
+
+
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/emptools"
+                />
+            <TextView
+                android:id="@+id/textAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/progressBar"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textColor="#03A9F4"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                />
+
+
+        <fragment
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:id="@+id/storelocationmap"
+            android:layout_below="@id/textAddress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>
